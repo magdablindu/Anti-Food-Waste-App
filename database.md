@@ -55,43 +55,41 @@
 ### Relația **Users → Foods**
 - **Tip:** 1:N  
 - **Funcție:** Un utilizator poate avea mai multe alimente în frigider.  
-- **Mapare:** `Users.id → Foods.ownerId`  
+- `Users.id → Foods.ownerId`  
 
 ---
 
 ### Relația **Foods → Claims**
 - **Tip:** 1:N  
 - **Funcție:** Un aliment poate fi revendicat o singură dată.  
-- **Mapare:** `Foods.id → Claims.foodId`  
+- `Foods.id → Claims.foodId`  
 
 ---
 
 ### Relația **Users → Claims**
 - **Tip:** 1:N  
 - **Funcție:** Un utilizator poate revendica mai multe alimente.  
-- **Mapare:** `Users.id → Claims.requestedById`  
+- `Users.id → Claims.requestedById`  
 
 ---
 
 ### Relația **Users → Groups**
 - **Tip:** 1:N  
 - **Funcție:** Un utilizator poate crea mai multe grupuri.  
-- **Mapare:** `Users.id → Groups.createdById`  
+- `Users.id → Groups.createdById`  
 
 ---
 
 ### Relația **Groups → GroupMembers**
 - **Tip:** 1:N  
 - **Funcție:** Un grup poate avea mai mulți membri.  
-- **Mapare:** `Groups.id → GroupMembers.groupId`  
+- `Groups.id → GroupMembers.groupId`  
 
 ---
 
 ### Relația **Users → GroupMembers**
 - **Tip:** 1:N  
 - **Funcție:** Un utilizator poate face parte din mai multe grupuri.  
-- **Mapare:** `Users.id → GroupMembers.userId`  
+- `Users.id → GroupMembers.userId`  
 
-
-✔ Relație **M:N** între **Users** și **Groups**, implementată prin tabela intermediară **GroupMembers**.
 
