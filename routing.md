@@ -43,21 +43,21 @@
 
 ## II. Rute Front-End
 
-/login: Pagina principală pentru autentificarea utilizatorilor (acces public).
-/register: Pagina de creare a unui cont nou.
-/dashboard: Pagina principală după autentificare; afișează alimentele utilizatorului și notificările de expirare.
-/foods: Lista completă a alimentelor utilizatorului din frigider. Afișează filtre, categorii, status și opțiuni de editare/ștergere.
-/foods/new: Formular pentru adăugarea unui aliment nou.
-/foods/:id: Pagina cu detaliile unui aliment specific (în funcție de permisiuni). Permite modificarea alimentului sau schimbarea statusului.
-/foods/available: Pagina cu alimentele disponibile oferite de alți utilizatori.
-/claims: Pagina cu cererile trimise de utilizator pentru revendicare.
-/claims/received: Pagina cu cererile primite pentru alimentele utilizatorului (vizibil doar proprietarului).
-/groups: Pagina cu lista tuturor grupurilor din care utilizatorul face parte.
-/groups/new: Formular pentru crearea unui grup nou.
-/groups/:groupId: Afișează detaliile unui grup: nume, tip, membri.
-/groups/:groupId/invite: Pagină pentru invitarea altor utilizatori în grup (disponibilă doar creatorului grupului).
-/groups/:groupId/foods: Afișează doar alimentele „disponibile” partajate în acel grup.
-/share/:foodId: Pagină pentru generarea linkului sau textului de share pentru social media.
+###/login: Pagina principală pentru autentificarea utilizatorilor (acces public).
+###/register: Pagina de creare a unui cont nou.
+###/dashboard: Pagina principală după autentificare; afișează alimentele utilizatorului și notificările de expirare.
+###/foods: Lista completă a alimentelor utilizatorului din frigider. Afișează filtre, categorii, status și opțiuni de editare/ștergere.
+###/foods/new: Formular pentru adăugarea unui aliment nou.
+###/foods/:id: Pagina cu detaliile unui aliment specific (în funcție de permisiuni). Permite modificarea alimentului sau schimbarea statusului.
+###/foods/available: Pagina cu alimentele disponibile oferite de alți utilizatori.
+###/claims: Pagina cu cererile trimise de utilizator pentru revendicare.
+###/claims/received: Pagina cu cererile primite pentru alimentele utilizatorului (vizibil doar proprietarului).
+###/groups: Pagina cu lista tuturor grupurilor din care utilizatorul face parte.
+###/groups/new: Formular pentru crearea unui grup nou.
+###/groups/:groupId: Afișează detaliile unui grup: nume, tip, membri.
+###/groups/:groupId/invite: Pagină pentru invitarea altor utilizatori în grup (disponibilă doar creatorului grupului).
+###/groups/:groupId/foods: Afișează doar alimentele „disponibile” partajate în acel grup.
+###/share/:foodId: Pagină pentru generarea linkului sau textului de share pentru social media.
 
 
   (Autentificat) Generează un text sau link pregătit pentru distribuire pe rețele sociale.
