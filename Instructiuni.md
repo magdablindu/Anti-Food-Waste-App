@@ -142,7 +142,6 @@ Toate rutele sunt prefixate cu:
 
 ## **5.3 Modulul Revendicări (Claims)**
 
-### **5.3 Modulul Revendicări (Claims)**
 
 ### Metodă | Rută | Acces | Descriere
 | Metodă | Rută | Acces | Descriere |
