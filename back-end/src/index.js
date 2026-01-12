@@ -8,17 +8,21 @@ import claimsRoutes from "./routes/claimsRoutes.js";
 import groupsRoutes from "./routes/groupsRoutes.js";
 
 
-dotenv.config();
+dotenv.config(); // Încarcă variabilele de mediu
 const app = express();
 const prisma = new PrismaClient();
 
-app.use(cors());
-app.use(express.json());
+// Configurare middleware
+app.use(cors()); // Permite cereri din alte domenii
+app.use(express.json()); // Permite parsing-ul body-ului ca JSON
+
+// Rute API
 app.use("/api/auth", authRoutes);
 app.use("/api/foods", foodRoutes);
 app.use("/api/claims", claimsRoutes);
 app.use("/api/groups", groupsRoutes);
 
+// Ruta de bază pentru verificare status server
 app.get("/", (req, res) => {
   res.send("API Food Waste este pornit!");
 });

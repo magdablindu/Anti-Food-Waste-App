@@ -1,6 +1,11 @@
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
+/**
+ * Creează un grup nou.
+ * @param {Object} req - Obiectul cererii (conține numele și tipul grupului).
+ * @param {Object} res - Obiectul răspunsului.
+ */
 export const createGroup = async (req, res) => {
     try {
         const { name, type } = req.body;
@@ -9,7 +14,12 @@ export const createGroup = async (req, res) => {
             data: {
                 name,
                 type,
-                createdById: req.user.id
+                createdById: req.user.id,
+                members: {
+                    create: {
+                        userId: req.user.id
+                    }
+                }
             }
         });
 
@@ -19,6 +29,11 @@ export const createGroup = async (req, res) => {
     }
 };
 
+/**
+ * Invită un utilizator într-un grup.
+ * @param {Object} req - Obiectul cererii (conține ID-ul grupului și ID-ul utilizatorului invitat).
+ * @param {Object} res - Obiectul răspunsului.
+ */
 export const inviteToGroup = async (req, res) => {
     try {
         const { groupId, userId } = req.params;
@@ -36,6 +51,11 @@ export const inviteToGroup = async (req, res) => {
     }
 };
 
+/**
+ * Returnează grupurile din care face parte utilizatorul curent.
+ * @param {Object} req - Obiectul cererii.
+ * @param {Object} res - Obiectul răspunsului.
+ */
 export const getMyGroups = async (req, res) => {
     try {
         const groups = await prisma.groupMember.findMany({

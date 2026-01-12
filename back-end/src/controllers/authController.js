@@ -4,6 +4,12 @@ import jwt from "jsonwebtoken";
 
 const prisma = new PrismaClient();
 
+/**
+ * Înregistrează un utilizator nou.
+ * Verifică dacă emailul există deja, criptează parola și creează utilizatorul în baza de date.
+ * @param {Object} req - Obiectul cererii (request).
+ * @param {Object} res - Obiectul răspunsului (response).
+ */
 export const register = async (req, res) => {
     try {
         const { name, email, password } = req.body;
@@ -24,6 +30,12 @@ export const register = async (req, res) => {
     }
 };
 
+/**
+ * Autentifică un utilizator existent.
+ * Verifică credențialele și returnează un token JWT dacă sunt corecte.
+ * @param {Object} req - Obiectul cererii.
+ * @param {Object} res - Obiectul răspunsului.
+ */
 export const login = async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -45,6 +57,12 @@ export const login = async (req, res) => {
     }
 };
 
+/**
+ * Returnează profilul utilizatorului autentificat.
+ * Obține informațiile utilizatorului pe baza ID-ului din token.
+ * @param {Object} req - Obiectul cererii.
+ * @param {Object} res - Obiectul răspunsului.
+ */
 export const getProfile = async (req, res) => {
     try {
         const user = await prisma.user.findUnique({

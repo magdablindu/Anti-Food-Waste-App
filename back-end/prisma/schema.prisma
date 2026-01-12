@@ -12,7 +12,7 @@ model User {
   name          String
   email         String   @unique
   passwordHash  String
-  role          String
+  role          String   @default("user")
   createdAt     DateTime @default(now())
 
   foods         Food[]
